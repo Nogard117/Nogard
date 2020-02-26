@@ -1,0 +1,45 @@
+# Se utilíza el plugin DADA2 el cual corta, une, filtra y genera ASVs de nuestras secuencias. 
+
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs /dirección sequences.qza \
+--p-trim-left-f # \ (número de bases a eliminar del inicio de la seq)
+--p-trim-left-r # \
+--p-trunc-len-f # \(tamaño deseado de la secuencia forward y reverse)
+--p-trunc-len-r # \
+--o-table table.qza \
+--o-representative-sequences rep-seqs.qza \
+--o-denoising-stats denoising-stats.qza \
+
+Copy: qiime dada2 denoise-paired --i-demultiplexed-seqs /dirección sequences.qza --p-trim-left-f # --p-trim-left-r # --p-trunc-len-f # --p-trunc-len-r # --o-table table.qza --o-representative-sequences rep-seqs.qza --o-denoising-stats denoising-stats.qza
+
+# Esto nos generara 3 archivos output:
+
+# table.qza -> FeatureTable[Frecuency]
+# rep-seqs.qza -> FeatureData[Sequence]
+# denois-stats.qza -> SampleData[DADA2Stats]
+
+# Para observar los resultados deben generarse los archivos .qzv correspondientes:
+
+qiime feature-table summarize \
+--i-table /table.qza \
+--o-visualization table.qzv \
+--m-sample-metadata-file /metadata.tsv     (opcional)
+
+Copy: qiime feature-table summarize --i-table /table.qza --o-visualization table.qzv --m-sample-metadata-file /metadata.tsv
+
+qiime feature-table tabulate-seqs \
+--i-data /rep-seqs.qza \
+--o-visualization rep-seqs.qzv
+
+Copy: qiime feature-table tabulate-seqs --i-data /rep-seqs.qza --o-visualization rep-seqs.qzv
+
+qiime metadata tabulate \
+--m-input-file /denois-stats.qza \
+--o-visualization denoising-stats.qzv
+
+Copy: qiime metadata tabulate --m-input-file /denois-stats.qza --o-visualization denoising-stats.qzv
+
+Para observar los datos (HTML):
+
+qiime tools view /archivo.qzv
+
