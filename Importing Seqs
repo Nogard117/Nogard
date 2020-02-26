@@ -1,0 +1,8 @@
+# Importando Archivos a Qiime2 por manifiesto
+
+Manifest permite importar archivos fastq o fastq.gz que no contengan metadatos
+o un archivo de barcodes; para ello se elaborara un archivo con la extension .txt
+o .tsv el cual contendra el ID de nuestras secuencias y su dirección.
+
+sample-id forward-absolute-filepath reverse-absolute-filepath
+example1  /home/user/carpeta/fileR1.txt /home/user/carpeta/fileR2
