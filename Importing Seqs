@@ -1,4 +1,4 @@
-# **Importando Archivos a Qiime2 por manifiesto**
+**Importando Archivos a Qiime2 por manifiesto**
 
 Manifest permite importar archivos fastq o fastq.gz que no contengan metadatos
 o un archivo de barcodes; para ello se elaborara un archivo con la extension .txt
@@ -6,3 +6,32 @@ o .tsv el cual contendra el ID de nuestras secuencias y su dirección.
 
 sample-id forward-absolute-filepath reverse-absolute-filepath
 example1  /home/user/carpeta/fileR1.txt /home/user/carpeta/fileR2
+
+*Los espacios entre columnas se logran con la tecla
+TAB, de otra manera no podrá leerse.
+
+Posteriormente se utilizará el comando para importar los datos :
+
+qiime tools import \
+--type 'SampleData[PairedEndSequencesWithQuality]' \
+--input-path /dirección manifest \
+--output-path /sequences.qza \
+--input-format PairedEndFastqManifestPhred33V2
+
+# qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path /dirección manifest --output-path /sequences.qza --input-format PairedEndFastqManifestPhred33V2
+
+Una vez importadas las secuencias debe generarse un archivo .qzv con el siguiente comando: 
+
+qiime demux summarize \
+--i-data /sequences.qza \
+--o-visualization sequences.qzv
+
+# qiime demux summarize --i-data /sequences.qza --o-visualization sequences.qzv
+
+Este comando generara un archivo para visualización .qzv, para poder visualizarlo se utilizará el comando:
+
+qiime tools view /sequences.qzv
+
+Esto nos permitirá ver la información de las secuencias importadas a través de un archivo HTML (abrirá en nuestro navegador por defecto)
+
+
