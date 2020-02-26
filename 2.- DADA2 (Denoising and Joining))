@@ -1,3 +1,4 @@
+######################################################################################################################
 # Se utilíza el plugin DADA2 el cual corta, une, filtra y genera ASVs de nuestras secuencias. 
 
 qiime dada2 denoise-paired \
