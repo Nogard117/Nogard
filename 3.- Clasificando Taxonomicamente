@@ -1,3 +1,4 @@
+######################################################################################################################
 # Despues de tratar las secuencias con DADA2, podemos clasificarlas utilizando una base de datos, como Green Genes o SILVA
 # pero ¿Por qué clasificar antes de generar las matrices y nuestra rarefaccion alpha?
 # con anterioridad generamos los archivos table.qza el cual es un archivo tipo FeatureTable[Frecuency] y el archivo
