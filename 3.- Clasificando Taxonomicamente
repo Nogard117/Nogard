@@ -14,11 +14,17 @@ qiime feature-classifier classify-sklearn \
 --i-reads rep-seqs.qza \
 --o-classification taxonomy.qza
 
+# Output
+- taxonomy.qza
+
 # Para tabularlo y visualizarlo:
 
 qiime metadata tabulate \
 --m-input-file taxonomy.qza \
 --o-visualization taxonomy.qzv
+
+# Output
+- taxonomy.qzv
 
 # Puede que las graficas generadas con anterioridad no nos sean de gran ayuda y aqui entra nuestro archivo de meta datos
 # para poder generar una grafica de barras que compare nuestras muestras entre si.
@@ -29,3 +35,5 @@ qiime taxa barplot \
 --m-metadata-file sample-metadata.tsv \
 --o-visualization taxa-bar-plot.qzv
 
+# Output
+- taxa-bar-plot.qzv
