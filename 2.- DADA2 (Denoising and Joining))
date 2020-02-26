@@ -32,6 +32,11 @@ qiime metadata tabulate \
 --m-input-file /denois-stats.qza \
 --o-visualization denoising-stats.qzv
 
+# Outputs
+- metadata.qzv
+- rep-seqs.qzv
+- denoising-stats.qzv
+
 # Para observar los datos (HTML):
 
 qiime tools view /archivo.qzv
