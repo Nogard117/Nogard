@@ -19,15 +19,11 @@ qiime tools import \
 --output-path /sequences.qza \
 --input-format PairedEndFastqManifestPhred33V2
 
-Copy: qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path /dirección manifest --output-path /sequences.qza --input-format PairedEndFastqManifestPhred33V2
-
 # Una vez importadas las secuencias debe generarse un archivo .qzv con el siguiente comando: 
 
 qiime demux summarize \
 --i-data /sequences.qza \
 --o-visualization sequences.qzv
-
-Copy: qiime demux summarize --i-data /sequences.qza --o-visualization sequences.qzv
 
 # Este comando generara un archivo para visualización .qzv, para poder visualizarlo se utilizará el comando:
 
