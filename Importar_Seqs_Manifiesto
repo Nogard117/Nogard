@@ -1,5 +1,6 @@
 # **Importando Archivos a Qiime2 por manifiesto**
 
+## En este caso se importaran secuencias PAIRED END, las cuales NO contienen metadatos ni un archivo de barcodes ##
 # Manifest permite importar archivos fastq o fastq.gz que no contengan metadatos
 # o un archivo de barcodes; para ello se elaborara un archivo con la extension .txt
 # o .tsv el cual contendra el ID de nuestras secuencias y su dirección.
