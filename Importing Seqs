@@ -1,4 +1,4 @@
-# Importando Archivos a Qiime2 por manifiesto
+# **Importando Archivos a Qiime2 por manifiesto**
 
 Manifest permite importar archivos fastq o fastq.gz que no contengan metadatos
 o un archivo de barcodes; para ello se elaborara un archivo con la extension .txt
