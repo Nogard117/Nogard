@@ -1,3 +1,4 @@
+######################################################################################################################
 # **Importando Archivos a Qiime2 por manifiesto**
 
 ## En este caso se importaran secuencias PAIRED END, las cuales NO contienen metadatos ni un archivo de barcodes ##
