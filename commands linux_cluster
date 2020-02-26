@@ -1,0 +1,50 @@
+# Linux General
+
+pwd: ubicación actual del directorio 
+
+ls: contenido del directorio 
+ls -a: muestra directorios ocultos
+ls -l: info de cada archivo en el directorio
+ls -R: muestra subdirectorios de cada directorio
+
+cd: permite cambiar de directorio
+cd .. : regresa un nivel en la jerarquía de directorios
+cd -- : regresa al directorio del usuario principal 
+
+mkdir: crea un directorio en nuestra ubicación
+
+mv archivo /home/usuario/carpeta: mueve un archivo a la carpeta destino
+
+rm: elimina un archivo
+rm -r: elimina un directorio y su contenido
+
+filepath: proporciona la dirección del archivo solicitado
+
+vim nombre.txt   crea un archivo editable en formato .txt, se guardara en el directorio donde se ejecutó el comando vim; al completar el archivo presione ESC, :wq! Para guardar y salir.
+
+less: nos permite visualizar un archivo 
+
+# Cluster
+
+CTRL+ALT+T: Abrir la terminal
+
+ssh: Permite conectarse a un nodo de trabajo cuando se trabaja en clúster
+
+ssh -f: habilita el uso de una interfaz básica al conectarse al clúster 
+
+Conda activate qiime2-2019.7
+Activa el entorno conda de qiime2
+
+scp dirección-archivo usuario@hobon.cicy.mx:/destino
+Transfiere un archivo del host al clúster
+
+scp usuario@hobon.cicy.mx:/dirección-archivo /destino-host
+Transfiere un archivo del clúster al host
+
+Dirección carpetas Hobón : 
+
+/data/home/francisco.cardenas
+Dirección hobón para resultados
+
+/data/scratch/francico.cardenas
+Dirección hobón para raw data 
