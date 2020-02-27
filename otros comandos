@@ -1,0 +1,11 @@
+###############################################################################################
+# Qiime2 tiene varios plugins y comandos, los cuales no les he encontrado un lugar propio pero si utilidad
+
+# Podemos asociar la tabla FeatureData[Sequences] (secuencias representativas) con el artefacto de taxonomia
+# para optener una tabulacion que nos muestre la secuencia en formato FASTA, el taxa asociado y el % confidencia
+# lo cual nos permite compararlo con un solo click con la base de datos del NCBI
+
+qiime metadata tabulate
+--m-input-file taxonomy.qza
+--m-input-file rep-seqs.qza
+--o-visualization merged-table.qzv
