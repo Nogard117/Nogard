@@ -17,7 +17,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 --o-tree unrooted-tree.qza \
 --o-rooted-tree rooted-tree.qza
 
-# Outputs
+# Outputs                          # Tipo de Artefacto
 
 - Aligned-rep-seqs.qza          -> FeatureData[AlignedSequence]
 - masked-aligned-rep-seqs.qza   -> FeatureData[AlignedSequence]
