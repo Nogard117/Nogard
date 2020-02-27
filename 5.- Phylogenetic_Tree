@@ -13,13 +13,13 @@
 qiime phylogeny align-to-tree-mafft-fasttree \
 --i-sequences rep-seqs.qza \
 --o-alignment aligned-rep-seqs.qza \
---o-masked-alignment masked-aligned-rep-seqs-qza \
+--o-masked-alignment masked-aligned-rep-seqs.qza \
 --o-tree unrooted-tree.qza \
 --o-rooted-tree rooted-tree.qza
 
 # Outputs
 
-- Aligned-rep-seqs.qza
-- masked-aligned-rep-seqs.qza
-- rooted-tree.qza
-- unrooted-tree.qza
+- Aligned-rep-seqs.qza          -> FeatureData[AlignedSequence]
+- masked-aligned-rep-seqs.qza   -> FeatureData[AlignedSequence]
+- rooted-tree.qza               -> Phylogeny[Unrooted]
+- unrooted-tree.qza             -> Phylogeny[Rooted]
